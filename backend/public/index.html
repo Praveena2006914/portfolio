@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>Admin | Portfolio Inquiries</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+<body>
+<main id="login" class="box">
+  <h1>Admin Login</h1>
+  <form id="lf">
+    <label>Email<input id="le" type="email" autocomplete="username" required></label>
+    <label>Password<input id="lp" type="password" autocomplete="current-password" required></label>
+    <p id="lerr" class="err" role="alert"></p>
+    <button class="btn p" type="submit">Sign in</button>
+  </form>
+</main>
+
+<main id="dash" hidden>
+  <header class="top"><h1>Client Inquiries <span id="count"></span></h1><button id="out" class="btn">Log out</button></header>
+  <div class="tools">
+    <input id="q" type="search" placeholder="Search name, email, message…" aria-label="Search">
+    <select id="sf" aria-label="Filter by status"><option value="">All statuses</option><option>NEW</option><option>CONTACTED</option><option>COMPLETED</option></select>
+  </div>
+  <p id="derr" class="err" role="alert"></p>
+  <div class="scroll"><table>
+    <thead><tr><th>Name</th><th>Email</th><th>Project type</th><th>Submitted</th><th>Status</th></tr></thead>
+    <tbody id="rows"></tbody>
+  </table></div>
+  <div class="pager"><button id="prev" class="btn">Prev</button><span id="pg"></span><button id="next" class="btn">Next</button></div>
+</main>
+
+<dialog id="dlg">
+  <h2 id="dn"></h2>
+  <p class="meta" id="dm"></p>
+  <pre id="dmsg"></pre>
+  <div class="actions">
+    <label>Status <select id="ds"><option>NEW</option><option>CONTACTED</option><option>COMPLETED</option></select></label>
+    <button id="del" class="btn danger">Delete</button>
+    <button id="close" class="btn">Close</button>
+  </div>
+  <p id="deer" class="err" role="alert"></p>
+</dialog>
+<script src="admin.js"></script>
+</body>
+</html>
