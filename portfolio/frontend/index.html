@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Praveena S | Full Stack Developer Portfolio</title>
+<meta name="description" content="Portfolio of Praveena S, a Computer Science Engineering student and full stack developer available for freelance web development projects.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#07080f;--bg2:#0d1021;--card:rgba(255,255,255,.04);--bd:rgba(255,255,255,.09);--tx:#e8eaf4;--mu:#9aa0b8;--a:#7c6cff;--b:#38bdf8;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:calc(72px + env(safe-area-inset-top,0px));height:100%}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.65 Inter,system-ui,sans-serif;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+section{padding:88px 0;position:relative}
+h2{font-size:clamp(1.7rem,4vw,2.4rem);margin:0 0 8px;letter-spacing:-.02em}
+.sub{color:var(--mu);margin:0 0 40px;max-width:620px}
+.grad{background:linear-gradient(120deg,var(--a),var(--b));-webkit-background-clip:text;background-clip:text;color:transparent}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(7,8,15,.75);backdrop-filter:blur(14px);border-bottom:1px solid var(--bd);padding-top:env(safe-area-inset-top,0px)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+nav ul{display:flex;gap:22px;list-style:none;margin:0;padding:0;font-size:.9rem;color:var(--mu)}
+nav ul a:hover{color:#fff}
+.logo{font-weight:800;letter-spacing:.04em}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:12px;font-weight:600;border:1px solid var(--bd);background:var(--card);color:var(--tx);cursor:pointer;font:inherit;font-weight:600;transition:transform .2s,box-shadow .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px);border-color:var(--a)}
+.btn.p{background:linear-gradient(120deg,var(--a),#5b8cff);border:0;box-shadow:0 8px 30px rgba(124,108,255,.35)}
+.btn.p:hover{box-shadow:0 10px 38px rgba(124,108,255,.55)}
+.btn.off{opacity:.45;cursor:not-allowed}.btn.off:hover{transform:none;border-color:var(--bd)}
+.btn.sm{padding:8px 14px;font-size:.85rem;border-radius:10px}
+.hero{min-height:100vh;display:flex;align-items:center;overflow:hidden;padding-top:100px}
+.hero::before,.hero::after{content:"";position:absolute;border-radius:50%;filter:blur(110px);z-index:0;animation:fl 12s ease-in-out infinite alternate}
+.hero::before{width:480px;height:480px;background:#4c3df0;opacity:.35;top:-80px;left:-120px}
+.hero::after{width:420px;height:420px;background:#0ea5e9;opacity:.25;bottom:-100px;right:-80px;animation-delay:-5s}
+@keyframes fl{to{transform:translate(40px,30px)}}
+.hero .wrap{position:relative;z-index:1}
+.code{position:absolute;right:22px;top:50%;transform:translateY(-50%);font:13px/1.8 ui-monospace,Menlo,monospace;color:#8f9bd0;background:var(--card);border:1px solid var(--bd);border-radius:16px;padding:18px 22px;backdrop-filter:blur(8px);box-shadow:0 0 60px rgba(124,108,255,.18)}
+.code i{color:#c084fc;font-style:normal}.code b{color:#38bdf8;font-weight:400}
+.avail{display:inline-flex;gap:10px;align-items:center;border:1px solid var(--bd);background:var(--card);padding:6px 14px;border-radius:99px;font-size:.85rem;color:var(--mu)}
+.dot{width:8px;height:8px;border-radius:50%;background:#34d399;box-shadow:0 0 10px #34d399;animation:pl 2s infinite}
+@keyframes pl{50%{opacity:.4}}
+h1{font-size:clamp(2.6rem,8vw,5rem);line-height:1.05;margin:22px 0 14px;letter-spacing:-.03em;font-weight:800}
+.role{font-weight:600;color:#c9ccff;margin:0 0 10px}
+.tag{color:var(--mu);font-size:1.1rem;max-width:520px;margin:0 0 28px}
+.row{display:flex;flex-wrap:wrap;gap:12px}
+.grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:18px;padding:24px;transition:transform .25s,border-color .25s,box-shadow .25s}
+.card:hover{transform:translateY(-4px);border-color:rgba(124,108,255,.55);box-shadow:0 12px 40px rgba(124,108,255,.12)}
+.card h3{margin:0 0 8px;font-size:1.1rem}.card p{margin:0;color:var(--mu);font-size:.95rem}
+.badge{display:inline-block;font-size:.78rem;padding:4px 11px;border-radius:99px;background:rgba(124,108,255,.14);border:1px solid rgba(124,108,255,.3);color:#c9c4ff;margin:4px 6px 0 0}
+.about{display:grid;gap:36px;grid-template-columns:1.4fr 1fr}
+.about p{color:var(--mu)}
+.fact{display:flex;justify-content:space-between;gap:12px;padding:12px 0;border-bottom:1px solid var(--bd);font-size:.95rem}.fact span{color:var(--mu)}
+.vis{height:150px;border-radius:12px;margin-bottom:16px;display:grid;place-items:center;font-size:2.4rem;font-weight:800;letter-spacing:-.03em;position:relative;overflow:hidden}
+.vis small{position:absolute;bottom:8px;right:12px;font-size:.68rem;font-weight:500;opacity:.6;letter-spacing:0}
+.tl{position:relative;padding-left:30px;border-left:2px solid var(--bd);margin-left:6px}
+.tl .it{position:relative;margin-bottom:28px}
+.tl .it::before{content:"";position:absolute;left:-39px;top:6px;width:14px;height:14px;border-radius:50%;background:var(--a);box-shadow:0 0 0 5px rgba(124,108,255,.2)}
+.tl h3{margin:0}.tl em{color:var(--b);font-style:normal;font-size:.88rem}.tl p{color:var(--mu);margin:6px 0 0}
+.ach{display:flex;gap:14px;align-items:flex-start}.ach .ic{font-size:1.4rem}
+.rv{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}.rv.in{opacity:1;transform:none}
+.cta{text-align:center;margin-top:36px;padding:34px;border-radius:20px;background:linear-gradient(120deg,rgba(124,108,255,.18),rgba(56,189,248,.12));border:1px solid var(--bd)}
+.cta h3{margin:0 0 16px;font-size:1.3rem}
+.ct{display:grid;gap:36px;grid-template-columns:1fr 1.2fr}
+form{display:grid;gap:14px}
+label{font-size:.85rem;color:var(--mu);display:grid;gap:6px}
+input,select,textarea{font:inherit;color:var(--tx);background:rgba(255,255,255,.05);border:1px solid var(--bd);border-radius:10px;padding:12px;width:100%}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--a);outline-offset:1px}
+select option{background:#0d1021}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
+.msg.bad{background:rgba(248,113,113,.1);border-color:rgba(248,113,113,.4);color:#fecaca}
+.err{color:#f87171;font-size:.8rem}
+.msg{padding:12px 14px;border-radius:10px;font-size:.9rem;background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.35);color:#a7f3d0}
+footer{border-top:1px solid var(--bd);padding:36px 0;color:var(--mu);font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px}
+footer .row{gap:18px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--b);outline-offset:3px}
+@media(max-width:820px){nav ul{display:none}.about,.ct{grid-template-columns:1fr}.code{display:none}section{padding:64px 0}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react/18.3.1/umd/react.production.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.3.1/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/htm@3.1.1/dist/htm.umd.js"></script>
+<script>
+const {useState,useEffect}=React;
+const html=htm.bind(React.createElement);
+
+/* ====== EDIT ME: add your real URLs here. Empty links show as disabled buttons. ====== */
+const CONFIG={
+  email:"spraveena926@gmail.com",
+  apiUrl:"http://localhost:5000", /* backend address: change to your deployed API URL (no trailing slash) */
+  github:"", linkedin:"", leetcode:"", codechef:"", resume:"",
+  projects:{expiry:{live:"",repo:""},spotify:{live:"",repo:""},grade:{live:"",repo:""},events:{live:"",repo:""}}
+};
+
+const NAV=["About","Skills","Projects","Experience","Achievements","Services","Contact"];
+const SKILLS=[["Programming Languages",["Java","Python","C"]],["Frontend",["HTML","CSS","JavaScript","React.js"]],["Backend",["Node.js"]],["Database",["MySQL","Prisma ORM"]],["Libraries & Data Science",["NumPy","Pandas","Matplotlib","Seaborn"]],["Tools",["VS Code","Git","GitHub","Jupyter Notebook","MySQL Workbench","Streamlit"]]];
+const PROJECTS=[
+ {k:"expiry",n:"ExpiryGuardLite",t:["React.js"],g:"#4c3df0,#0ea5e9",d:"A smart application that helps users manage expiry dates of food and household products. Add details manually or use barcode/OCR scanning, get reminder alerts, recipe suggestions from available ingredients and donation options to reduce food waste."},
+ {k:"spotify",n:"Spotify Clone",t:["HTML","CSS"],g:"#059669,#1e1b4b",d:"A music web interface inspired by Spotify, featuring organized playlists, song browsing and an interactive user interface."},
+ {k:"grade",n:"Student Grade Tracker",t:["Java"],g:"#b45309,#4c1d95",d:"A Java-based application that allows users to add student details, calculate average grades, display academic results and generate reports."},
+ {k:"events",n:"Events Webpage",t:["HTML"],g:"#be185d,#1e3a8a",d:"An upcoming events webpage displaying event names, dates, times, descriptions and contact information in an organized, user-friendly layout."}];
+const EXP=[
+ ["Python Programming Intern","InternPe","2024","Worked on practical Python coding tasks, strengthened programming fundamentals and improved problem-solving skills."],
+ ["Python & Java Full Stack Developer Virtual Internship","EduSkills (AICTE approved)","2024–2025","Learned frontend technologies, backend fundamentals and basic database integration."],
+ ["Java Programming Intern","CodeAlpha","2025","Developed Java-based applications using object-oriented programming concepts including classes, objects and inheritance."]];
+const ACH=[["💻","Solved 359 LeetCode problems","Maximum rating: 1705"],["🍴","Solved 377 CodeChef problems",""],["🧩","Solved 479 Skillrack problems",""],["🌱","CodeSynthesis","Merging Innovation with Sustainable Impact"],["☁️","Google Cloud Agentic AI Day","Hack2Skill"],["🌐","CCNA: Introduction to Networks","Cisco"],["🛡️","NPTEL Elite Certification","Ethical Hacking, IIT Kharagpur"],["🏅","AWS Cloud Practitioner",""],["📘","Infosys Data Structures and Algorithms",""],["🗄️","Cloud Computing for IaaS","Udemy"]];
+const SERV=[["🌍","Website Development","Building responsive and professional websites for businesses and individuals."],["🎨","Frontend Development","Creating modern, interactive and user-friendly web interfaces."],["⚙️","Full Stack Web Development","Developing functional web applications with frontend, backend and database integration."],["🐍","Java & Python Development","Building programming solutions, automation scripts and application logic."],["🗃️","Database Integration","Designing and integrating databases into web applications."]];
+
+function Ext({href,cls="btn",children}){
+  return href?html`<a class=${cls} href=${href} target="_blank" rel="noopener noreferrer">${children}</a>`
+   :html`<span class=${cls+" off"} aria-disabled="true" title="Add this URL in CONFIG">${children}</span>`;
+}
+function Head({t,s}){return html`<div class="rv"><h2>${t}</h2><p class="sub">${s}</p></div>`}
+
+function Nav(){return html`<nav><div class="wrap"><a href="#top" class="logo">PRAVEENA<span class="grad"> S</span></a><ul>${NAV.map(n=>html`<li key=${n}><a href=${"#"+n.toLowerCase()}>${n}</a></li>`)}</ul><a class="btn sm p" href="#contact">Hire Me</a></div></nav>`}
+
+function Hero(){return html`<header class="hero" id="top"><div class="wrap">
+ <span class="avail"><span class="dot"></span>Open to Freelance Projects & Opportunities</span>
+ <h1>PRAVEENA <span class="grad">S</span></h1>
+ <p class="role">Software Developer | Full Stack Developer | Problem Solver</p>
+ <p class="tag">Turning ideas into practical, scalable and user-friendly digital solutions.</p>
+ <div class="row"><a class="btn p" href="#projects">Explore My Work</a><a class="btn" href="#contact">Hire Me</a><${Ext} href=${CONFIG.resume}>Download Resume<//></div>
+ <div class="row" style=${{marginTop:14}}><${Ext} cls="btn sm" href=${CONFIG.github}>GitHub<//><${Ext} cls="btn sm" href=${CONFIG.linkedin}>LinkedIn<//><${Ext} cls="btn sm" href=${CONFIG.leetcode}>LeetCode<//></div>
+ <pre class="code" aria-hidden="true"><i>const</i> developer = {
+  name: <b>"Praveena S"</b>,
+  stack: [<b>"React"</b>, <b>"Node"</b>, <b>"Java"</b>],
+  openToWork: <i>true</i>
+};
+developer.<b>build</b>(idea);</pre>
+</div></header>`}
+
+function About(){return html`<section id="about"><div class="wrap">
+ <${Head} t="About Me" s="Who I am and what I care about." />
+ <div class="about rv"><div>
+  <p>I’m Praveena, a Computer Science Engineering student at Chennai Institute of Technology with a strong interest in software development, full-stack development and problem-solving.</p>
+  <p>I enjoy transforming ideas into functional applications and building user-friendly digital experiences. Through internships, personal projects and competitive programming, I continuously improve my technical skills and practical development knowledge.</p>
+  <p>I’m interested in collaborating on real-world projects where I can create meaningful and effective software solutions.</p></div>
+  <div class="card">${[["Degree","B.E. Computer Science Engineering"],["College","Chennai Institute of Technology"],["CGPA","9.06"],["Graduation","2027"]].map(([a,b])=>html`<div class="fact" key=${a}><span>${a}</span><strong>${b}</strong></div>`)}</div></div>
+</div></section>`}
+
+function Skills(){return html`<section id="skills"><div class="wrap">
+ <${Head} t="Technical Skills" s="The tools and technologies I work with." />
+ <div class="grid">${SKILLS.map(([c,l])=>html`<div class="card rv" key=${c}><h3>${c}</h3>${l.map(s=>html`<span class="badge" key=${s}>${s}</span>`)}</div>`)}</div>
+</div></section>`}
+
+function Projects(){return html`<section id="projects"><div class="wrap">
+ <${Head} t="Featured Projects" s="Things I’ve built. Previews are placeholders until screenshots are added." />
+ <div class="grid" style=${{gridTemplateColumns:"repeat(auto-fit,minmax(300px,1fr))"}}>${PROJECTS.map(p=>{const L=CONFIG.projects[p.k];return html`<article class="card rv" key=${p.k}>
+  <div class="vis" style=${{background:`linear-gradient(135deg,${p.g})`}} role="img" aria-label=${p.n+" preview placeholder"}>${p.n.split(" ").map(w=>w[0]).join("")}<small>Preview placeholder</small></div>
+  <h3>${p.n}</h3><p>${p.d}</p><div style=${{margin:"12px 0 16px"}}>${p.t.map(s=>html`<span class="badge" key=${s}>${s}</span>`)}</div>
+  <div class="row"><${Ext} cls="btn sm p" href=${L.live}>View Project<//><${Ext} cls="btn sm" href=${L.repo}>GitHub<//></div></article>`})}</div>
+</div></section>`}
+
+function Experience(){return html`<section id="experience"><div class="wrap">
+ <${Head} t="Experience & Internships" s="Hands-on learning across Python, Java and full stack development." />
+ <div class="tl">${EXP.map(([r,o,y,d])=>html`<div class="it rv" key=${o}><h3>${r}</h3><em>${o} · ${y}</em><p>${d}</p></div>`)}</div>
+</div></section>`}
+
+function Achievements(){return html`<section id="achievements"><div class="wrap">
+ <${Head} t="Achievements & Certifications" s="Competitive programming, events and certifications." />
+ <div class="grid">${ACH.map(([i,t,s])=>html`<div class="card ach rv" key=${t}><span class="ic">${i}</span><div><h3>${t}</h3>${s&&html`<p>${s}</p>`}</div></div>`)}</div>
+</div></section>`}
+
+function Services(){return html`<section id="services"><div class="wrap">
+ <${Head} t="Work With Me" s="Services I can deliver for your business or idea." />
+ <div class="grid">${SERV.map(([i,t,d])=>html`<div class="card rv" key=${t}><div style=${{fontSize:"1.8rem",marginBottom:8}}>${i}</div><h3>${t}</h3><p>${d}</p></div>`)}</div>
+ <div class="cta rv"><h3>Have an idea? Let’s turn it into reality.</h3><a class="btn p" href="#contact">Discuss Your Project</a></div>
+</div></section>`}
+
+function Contact(){
+ const [f,setF]=useState({name:"",email:"",type:"Website Development",message:"",website:""});
+ const [e,setE]=useState({}); const [st,setSt]=useState({k:"idle",m:""});
+ const set=k=>ev=>setF({...f,[k]:ev.target.value});
+ const submit=async ev=>{ev.preventDefault();if(st.k==="sending")return;const x={};
+  if(f.name.trim().length<2)x.name="Please enter your name.";
+  if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(f.email))x.email="Please enter a valid email address.";
+  if(f.message.trim().length<10)x.message="Please write at least 10 characters.";
+  setE(x);if(Object.keys(x).length){setSt({k:"idle",m:""});return}
+  setSt({k:"sending",m:""});
+  try{
+   const r=await fetch(CONFIG.apiUrl+"/api/inquiries",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({name:f.name,email:f.email,projectType:f.type,message:f.message,website:f.website})});
+   let d={};try{d=await r.json()}catch(_){}
+   if(r.status===201&&d.success){setSt({k:"ok",m:d.message});setF({name:"",email:"",type:f.type,message:"",website:""});return}
+   if(r.status===400&&d.errors)setE(Object.fromEntries(Object.entries(d.errors).map(([k,v])=>[k==="projectType"?"type":k,v[0]])));
+   const fallback={400:"Please check the form and try again.",409:"This looks like a duplicate of a message you just sent.",429:"Too many attempts. Please wait a few minutes and try again.",503:"The database is temporarily unavailable. Please try again shortly."};
+   setSt({k:"err",m:d.message||fallback[r.status]||"Something went wrong on the server. Please try again or email "+CONFIG.email+"."});
+  }catch(_){setSt({k:"err",m:"Cannot reach the server. Please check your connection or email me at "+CONFIG.email+"."})}
+ };
+ return html`<section id="contact"><div class="wrap">
+ <${Head} t="Have a Project in Mind? Let’s Build Something Amazing." s="Tell me about your idea and I’ll get back to you." />
+ <div class="ct rv"><div class="card"><h3>Get in touch</h3><p style=${{margin:"8px 0 18px"}}>Prefer to reach out directly?</p>
+  <div class="row" style=${{flexDirection:"column",alignItems:"flex-start"}}><a class="btn sm" href=${"mailto:"+CONFIG.email}>✉ ${CONFIG.email}</a><${Ext} cls="btn sm" href=${CONFIG.linkedin}>LinkedIn<//><${Ext} cls="btn sm" href=${CONFIG.github}>GitHub<//></div></div>
+ <form onSubmit=${submit} noValidate>
+  <label>Name<input value=${f.name} onInput=${set("name")} autocomplete="name" aria-invalid=${!!e.name}/>${e.name&&html`<span class="err" role="alert">${e.name}</span>`}</label>
+  <label>Email<input type="email" value=${f.email} onInput=${set("email")} autocomplete="email" aria-invalid=${!!e.email}/>${e.email&&html`<span class="err" role="alert">${e.email}</span>`}</label>
+  <label>Project Type<select value=${f.type} onChange=${set("type")}>${[...SERV.map(s=>s[1]),"Other"].map(o=>html`<option key=${o}>${o}</option>`)}</select>${e.type&&html`<span class="err" role="alert">${e.type}</span>`}</label>
+  <label>Message<textarea rows="5" value=${f.message} onInput=${set("message")} aria-invalid=${!!e.message}></textarea>${e.message&&html`<span class="err" role="alert">${e.message}</span>`}</label>
+  <div class="hp" aria-hidden="true"><label>Website<input tabindex="-1" autocomplete="off" value=${f.website} onInput=${set("website")}/></label></div>
+  <button class="btn p" type="submit" disabled=${st.k==="sending"}>${st.k==="sending"?"Sending…":"Send Message"}</button>
+  ${st.k==="ok"&&html`<div class="msg" role="status">${st.m}</div>`}
+  ${st.k==="err"&&html`<div class="msg bad" role="alert">${st.m}</div>`}
+ </form></div>
+</div></section>`}
+
+function Footer(){return html`<footer><div class="wrap"><div><strong>Designed & Developed by Praveena S.</strong><div>© ${new Date().getFullYear()} Praveena S. All rights reserved.</div></div>
+ <div class="row">${NAV.slice(0,4).map(n=>html`<a key=${n} href=${"#"+n.toLowerCase()}>${n}</a>`)}</div>
+ <div class="row"><${Ext} cls="" href=${CONFIG.github}>GitHub<//><${Ext} cls="" href=${CONFIG.linkedin}>LinkedIn<//><${Ext} cls="" href=${CONFIG.leetcode}>LeetCode<//></div></div></footer>`}
+
+function App(){
+ useEffect(()=>{const o=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add("in");o.unobserve(x.target)}}),{threshold:.12});
+  document.querySelectorAll(".rv").forEach(n=>o.observe(n));return()=>o.disconnect()},[]);
+ return html`<${Nav}/><main><${Hero}/><${About}/><${Skills}/><${Projects}/><${Experience}/><${Achievements}/><${Services}/><${Contact}/></main><${Footer}/>`}
+ReactDOM.createRoot(document.getElementById("root")).render(html`<${App}/>`);
+</script>
+</body>
+</html>
